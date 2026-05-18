@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(ui-ux-pro-max-0.1.0)",
+      "Skill(anthropic-style-cn)",
+      "Bash(npm create *)",
+      "Bash(npm --prefix apps/web install)",
+      "Bash(npm --prefix apps/web install axios echarts echarts-for-react lucide-react clsx)",
+      "Bash(npm --prefix apps/web install -D tailwindcss@3 postcss autoprefixer)",
+      "Bash(npm --prefix apps/web exec tailwindcss init -p)",
+      "Bash(npm install *)",
+      "Bash(npm exec *)",
+      "Bash(npx tailwindcss *)",
+      "Bash(npm run *)",
+      "Bash(npm *)",
+      "Bash(python -m venv \"/f/my_work/A-Stock Agent Studio/apps/api/.venv\")",
+      "Bash(\"/f/my_work/A-Stock Agent Studio/apps/api/.venv/Scripts/python\" -m pip install -e \"/f/my_work/A-Stock Agent Studio/apps/api[dev]\")",
+      "Bash(/f/my_work/A-Stock Agent Studio/apps/api/.venv/Scripts/python *)",
+      "Bash(curl *)"
+    ]
+  }
+}

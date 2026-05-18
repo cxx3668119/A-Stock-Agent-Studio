@@ -1,0 +1,9 @@
+from fastapi import APIRouter
+
+from app.api.v1 import analysis, health, reports, stocks
+
+api_router = APIRouter(prefix="/api/v1")
+api_router.include_router(health.router)
+api_router.include_router(stocks.router)
+api_router.include_router(analysis.router)
+api_router.include_router(reports.router)

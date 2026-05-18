@@ -1,0 +1,18 @@
+Metadata-Version: 2.4
+Name: a-stock-agent-api
+Version: 0.1.0
+Summary: FastAPI backend for A-Stock Agent Studio
+Requires-Python: >=3.11
+Requires-Dist: fastapi>=0.115.0
+Requires-Dist: uvicorn[standard]>=0.32.0
+Requires-Dist: pydantic-settings>=2.6.0
+Requires-Dist: python-dotenv>=1.0.1
+Requires-Dist: httpx>=0.27.2
+Requires-Dist: sse-starlette>=2.1.3
+Requires-Dist: sqlmodel>=0.0.22
+Requires-Dist: psycopg[binary]>=3.2.3
+Requires-Dist: redis>=5.1.1
+Provides-Extra: dev
+Requires-Dist: pytest>=8.3.3; extra == "dev"
+Requires-Dist: ruff>=0.7.0; extra == "dev"
+Requires-Dist: httpx>=0.27.2; extra == "dev"

@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #ece9e0;
+  --surface: #f7f4ea;
+  --surface-2: #fffdf7;
+  --ink: #141413;
+  --muted: #6b6860;
+  --faint: #a8a398;
+  --line: #d8d5cc;
+  --line-soft: #e8e3d7;
+  --orange: #d97757;
+  --orange-soft: rgba(217, 119, 87, 0.13);
+  --blue: #6a9bcc;
+  --blue-soft: rgba(106, 155, 204, 0.14);
+  --olive: #788c5d;
+  --olive-soft: rgba(120, 140, 93, 0.14);
+  --red: #c0453a;
+  --red-soft: rgba(192, 69, 58, 0.13);
+  --green: #6b8f47;
+  --green-soft: rgba(107, 143, 71, 0.13);
+  --amber: #c9943a;
+  --amber-soft: rgba(201, 148, 58, 0.14);
+  --dark: #191815;
+  --dark-2: #24231f;
+  --dark-line: #3a3830;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  color: var(--ink);
+  font-family: Poppins, "PingFang SC", "Microsoft YaHei", sans-serif;
+  background:
+    radial-gradient(circle at 16% 8%, rgba(217, 119, 87, 0.16), transparent 32%),
+    radial-gradient(circle at 82% 12%, rgba(106, 155, 204, 0.13), transparent 30%),
+    radial-gradient(circle at 72% 88%, rgba(120, 140, 93, 0.10), transparent 34%),
+    var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(217, 119, 87, 0.35);
+}
+
+::selection {
+  color: var(--surface-2);
+  background: var(--orange);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+.terminal-grid::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(to bottom, black, transparent 72%);
+  opacity: 0.55;
+}
+
+.reveal-up {
+  animation: reveal-up 520ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+  }
+}
