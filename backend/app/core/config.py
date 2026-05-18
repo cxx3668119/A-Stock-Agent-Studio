@@ -8,7 +8,7 @@ class Settings(BaseSettings):
     app_env: str = "dev"
     log_level: str = "INFO"
     api_cors_origins: str = "http://localhost:5173,http://127.0.0.1:5173"
-    database_url: str = "postgresql+psycopg://postgres:postgres@localhost:5432/a_stock_agent_studio"
+    database_url: str = "postgresql+psycopg://postgres:postgres@localhost:15432/a_stock_agent_studio"
     redis_url: str = "redis://localhost:6379/0"
     llm_provider: str = "mock"
     llm_model: str = "mock-a-stock-analyst"

@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//f/my_work/A-Stock Agent Studio/**)"
+    ]
+  }
+}
