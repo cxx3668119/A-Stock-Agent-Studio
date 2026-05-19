@@ -1,6 +1,8 @@
 from collections.abc import Generator
 
-from sqlmodel import Session, create_engine
+from sqlalchemy import create_engine
+from sqlalchemy.orm import Session
+
 
 from app.core.config import get_settings
 

@@ -1,5 +1,6 @@
 from pydantic import BaseModel
-
+from datetime import date, datetime
+from uuid import UUID
 
 class MetricItem(BaseModel):
     label: str
@@ -34,3 +35,13 @@ class StockSummary(BaseModel):
     description: str
     metrics: list[MetricItem]
     sources: list[EvidenceSource]
+
+class StockRead(BaseModel):
+    id: UUID
+    code: str
+    name: str
+    exchange: str | None = None
+    industry: str | None = None
+    listing_date: date | None = None
+    created_at: datetime
+    updated_at: datetime
