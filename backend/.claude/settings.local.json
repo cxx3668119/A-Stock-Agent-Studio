@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Read(//f/my_work/A-Stock Agent Studio/**)"
+      "Read(//f/my_work/A-Stock Agent Studio/**)",
+      "Bash(python -m app.providers.test)"
     ]
   }
 }

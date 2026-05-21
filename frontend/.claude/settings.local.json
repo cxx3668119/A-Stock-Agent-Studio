@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//f/my_work/A-Stock Agent Studio/backend/app/api/v1/**)",
+      "Read(//f/my_work/A-Stock Agent Studio/backend/app/schemas/**)"
+    ]
+  }
+}

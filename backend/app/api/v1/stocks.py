@@ -8,9 +8,10 @@ from app.db.session import get_session
 # from app.models.stock import Stock
 
 from app.schemas.common import ApiResponse
-from app.schemas.stock import StockRead, StockSearchItem, StockSummary
+from app.schemas.stock import StockSearchItem, StockSummary
 from app.services.market_data_service import market_data_service
 from app.services.stock_service import StockService
+
 router = APIRouter(prefix="/stocks", tags=["stocks"])
 
 
@@ -21,7 +22,7 @@ def search_stocks(
     session: Session = Depends(get_session),
 ) -> ApiResponse[list[StockSearchItem]]:
     return ApiResponse(
-        data=StockService(session).get_stock_by_code(q),
+        data=StockService(session).search_stocks(q),
         trace_id=request.state.trace_id,
     )
 
